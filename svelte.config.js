@@ -3,12 +3,12 @@ import adapter from "@sveltejs/adapter-static";
 export default {
   kit: {
     adapter: adapter({
-      // fallback: "404.html",
-      // precompress: false,
-      // strict: true,
+      pages: "build",
+      assets: "build",
+      fallback: null,
     }),
     paths: {
-      base: process.argv.includes("dev") ? "" : process.env.BASE_PATH,
+      base: process.argv.includes("dev") ? "" : "/new-liff",
     },
   },
 };
